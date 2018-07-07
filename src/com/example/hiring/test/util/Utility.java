@@ -19,6 +19,11 @@ public class Utility {
 	 * Date formating function using SimpleDateFormate
 	 * 
 	 */
+	/*
+	 * @return String
+	 * @param Date date
+	 *
+	 */
 	public static String dateFormater(Date date) {
 
 		SimpleDateFormat dateformat = new SimpleDateFormat("dd-MM-YYYY");
@@ -30,6 +35,12 @@ public class Utility {
 	/*
 	 * Formatting double value upto 2 decimal places
 	 */
+	/*
+	 * @return double
+	 * @param double d
+	 *
+	 */
+	
 	public static double roundTwoDecimals(double d) {
 		DecimalFormat twoDForm = new DecimalFormat("#.##");
 		return Double.valueOf(twoDForm.format(d));
@@ -38,6 +49,12 @@ public class Utility {
 	/*
 	 * get day based on the weekday
 	 */
+	/*
+	 * @return String
+	 * @param int i
+	 *
+	 */
+	
 	public static String findday(int i) {
 		// TODO Auto-generated method stub
 		String s = "";

@@ -34,7 +34,10 @@ public class TradeProcessor {
 	public TradeProcessor() {
 		// TODO Auto-generated constructor stub
 	}
-	
+	/*
+	 * @return List<ClientInstruction> 
+	 *
+	 */	
 	public List<ClientInstruction> populateClientInstruction(){
 		
 
@@ -207,6 +210,10 @@ public class TradeProcessor {
 		return clientInstructionList;
 
 	}
+	/*
+	 * @return int 
+	 *
+	 */	
 
 	public int getTotalNoOfSharesToBeProcessed() {
 		
@@ -216,6 +223,11 @@ public class TradeProcessor {
 	 * Processing order for trade settlement on working day with instruction receved
 	 * from the client
 	 */
+	
+	/*
+	 * @return List<StockTransaction> 
+	 *
+	 */	
 	public List<StockTransaction> placeOrder(List<ClientInstruction> clientInstructionList) throws ParseException {
 		// TODO Auto-generated method stub
 		System.out.println();
@@ -247,6 +259,12 @@ public class TradeProcessor {
 		return list;
 	}
 
+	/*
+	 * @return StockTransaction
+	 * @param Calendar cal
+	 * @param ClientInstruction instruction
+	 *
+	 */
 	public StockTransaction process(Calendar cal, ClientInstruction instruction) {
 		// TODO Auto-generated method stub
 		System.out.println();
@@ -369,6 +387,12 @@ public class TradeProcessor {
 
 	/*
 	 * Trade settlement process on working days based on currency type
+	 */
+	/*
+	 * @return StockTransaction
+	 * @param Calendar cal
+	 * @param ClientInstruction instruction
+	 *
 	 */
 	private StockTransaction performTradeSettlement(Calendar cal, ClientInstruction instruction) {
 		// TODO Auto-generated method stub

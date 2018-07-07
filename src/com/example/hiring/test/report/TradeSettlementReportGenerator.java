@@ -12,6 +12,7 @@ import com.example.hiring.test.model.StockTransaction;
 
 /**
  * @author Anand
+ * @ description
  * 
  * TradeSettlementReportGenerator Object provide the below functionality
  * 1.	printReportsBySharesSold			
@@ -35,7 +36,12 @@ public class TradeSettlementReportGenerator {
 	/*
 	 * Report for shares sold
 	 */
-	
+	/*
+	 * @param List<StockTransaction>
+	 * @return int 
+	 * 
+	 */
+			
 	public int printReportsBySharesSold(List<StockTransaction> stockList) {
 		// TODO Auto-generated method stub
 		System.out.println();
@@ -69,6 +75,13 @@ public class TradeSettlementReportGenerator {
 /*
  *  Report -Amount in USD settled incoming everyday
  */
+	/*
+	 * @param List<StockTransaction>
+	 * @param sdailyReportDate
+	 * @return int 
+	 * 
+	 */
+	
 	public int printDailyReportsBySharesSold(List<StockTransaction> stockList, String sdailyReportDate) {
 		// TODO Auto-generated method stub
 		System.out.println();
@@ -101,6 +114,12 @@ public class TradeSettlementReportGenerator {
 	/*
 	 * Report for shares bought
 	 */
+
+	/*
+	 * @param List<StockTransaction>
+	 * @return int 
+	 * 
+	 */
 	public int printReportsBySharesBought(List<StockTransaction> stockList) {
 		// TODO Auto-generated method stub
 		System.out.println();
@@ -128,6 +147,13 @@ public class TradeSettlementReportGenerator {
 		System.out.println("End====printReportsBySharesBought(List<StockTransaction> stockList)");
 	return count;
 	}
+
+	/*
+	 * @param List<StockTransaction>
+	 * @param sdailyReportDate
+	 * @return int 
+	 * 
+	 */
 
 	public int printDailyReportsBySharesBought(List<StockTransaction> stockList, String sdailyReportDate) {
 		// TODO Auto-generated method stub
@@ -161,6 +187,12 @@ public class TradeSettlementReportGenerator {
 	/*
 	 * Report for Ranking of entities based on incoming and outgoing amount.
 	 */
+
+	/*
+	 * @param List<StockTransaction>
+	 * @return int 
+	 *
+	 */
 	public int printReportBySortIncomingOutgoing(List<StockTransaction> stockList) {
 		// TODO Auto-generated method stub
 		// stockList.stream().sorted().forEachOrdered(action);
@@ -180,7 +212,11 @@ public class TradeSettlementReportGenerator {
 		System.out.println();
 		return count;
 	}
-
+	/*
+	 * @param List<StockTransaction>
+	 * @return int 
+	 *
+	 */
 	public int printReportsByNextSettlement(List<StockTransaction> stockList) {
 		// TODO Auto-generated method stub
 		System.out.println();
