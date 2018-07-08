@@ -102,7 +102,7 @@ public class TradeSettlementReportGenerator {
 
 			}
 			System.out.println();
-			System.out.println("Total Shares Sold on daily basis=" + count);
+			System.out.println("Total Shares Sold on daily basis for the date " + sdailyReportDate+" is "+count);
 			System.out.println();
 		
 			
@@ -177,7 +177,7 @@ public class TradeSettlementReportGenerator {
 
 		}
 		System.out.println();
-		System.out.println("Total Shares Bought on daily basis=" + count);
+		System.out.println("Total Shares Bought on daily basis for the date " + sdailyReportDate +" is "+count);
 		System.out.println();
 		System.out.println("*******End****Report for Amount in USD settled outgoing everyday*************");
 		System.out.println("End====printDailyReportsBySharesBought(List<StockTransaction> stockList, String sdailyReportDate)");
