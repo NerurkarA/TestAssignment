@@ -39,7 +39,7 @@ public class TradeprocessApplication{
 		System.out.println(" Start----- Placing order for trade settlement ");
 		System.out.println("Total no of shares to be processed ="+clientInstructionList.size());
 		List<StockTransaction> stockList = tradeProcessorDemo.placeOrder(clientInstructionList);
-		System.out.println();
+//		System.out.println();
 		
 		
 		System.out.println(" End-----Finished-Placing order for trade settlement ");

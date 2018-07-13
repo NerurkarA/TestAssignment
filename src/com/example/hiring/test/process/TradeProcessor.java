@@ -230,9 +230,9 @@ public class TradeProcessor {
 	 */	
 	public List<StockTransaction> placeOrder(List<ClientInstruction> clientInstructionList) throws ParseException {
 		// TODO Auto-generated method stub
-		System.out.println();
+		//System.out.println();
 		System.out.println("Start==== placeOrder(List<ClientInstruction> clientInstructionList)");
-		System.out.println();
+		//System.out.println();
 		TradeProcessor tradeProcessorDemo = new TradeProcessor();
 		List<StockTransaction> list = new ArrayList<StockTransaction>();
 
@@ -253,8 +253,8 @@ public class TradeProcessor {
 			StockTransaction stockTransaction = tradeProcessorDemo.process(cal, instruction);
 			list.add(stockTransaction);
 		}
-		System.out.println();
-		System.out.println("Start==== placeOrder(List<ClientInstruction> clientInstructionList)");
+		//System.out.println();
+		System.out.println("End==== placeOrder(List<ClientInstruction> clientInstructionList)");
 		
 		return list;
 	}
@@ -267,9 +267,9 @@ public class TradeProcessor {
 	 */
 	public StockTransaction process(Calendar cal, ClientInstruction instruction) {
 		// TODO Auto-generated method stub
-		System.out.println();
-		System.out.println("Start==== StockTransaction process(Calendar cal, ClientInstruction instruction)");
-		System.out.println();
+		//System.out.println();
+		//System.out.println("Start==== StockTransaction process(Calendar cal, ClientInstruction instruction)");
+		//System.out.println();
 		StockTransaction stockTransactionToSettle = new StockTransaction();
 		// Adding one Day in Current Date
 		// sun mon tue wed thu fri sat
@@ -328,7 +328,7 @@ public class TradeProcessor {
 		//	System.out.println("Satrt-------AED or SAR trade processing");
 			StockTransaction value = performTradeSettlement(cal, instruction);
 			// display(value);
-			System.out.println();
+			//System.out.println();
 			//System.out.println("End-------AED or SAR trade processing");
 			return value;
 		} else {
@@ -397,9 +397,9 @@ public class TradeProcessor {
 	private StockTransaction performTradeSettlement(Calendar cal, ClientInstruction instruction) {
 		// TODO Auto-generated method stub
 		
-		System.out.println();
-		System.out.println("Start=======StockTransaction performTradeSettlement()");
-		System.out.println();
+		//System.out.println();
+		//System.out.println("Start=======StockTransaction performTradeSettlement()");
+		//System.out.println();
 		//	System.out.println(
 	//			"Stock Name =" + instruction.getStockName() + " Currency Type =" + instruction.getCurrencyType());
 		//System.out.println("Trade Settlement for Stock " + instruction.getStockName() + " on working date "
@@ -426,10 +426,10 @@ public class TradeProcessor {
 			st.setStatus("Shares Sold");
 		}
 		st.setHoldingValue(Utility.roundTwoDecimals(holdingValueForUnits));
-		System.out.println("Trade settlement for stock "+st.getStockName()+" on settlement date "+st.getSettlementDate()+" processed for the instrcution type "+st.getInstructionType());
-		System.out.println();
-		System.out.println("End=======StockTransaction performTradeSettlement()");
-		System.out.println();
+		//System.out.println("Trade settlement for stock "+st.getStockName()+" on settlement date "+st.getSettlementDate()+" processed for the instrcution type "+st.getInstructionType());
+		//System.out.println();
+		//System.out.println("End=======StockTransaction performTradeSettlement()");
+		//System.out.println();
 		return st;
 
 	}
