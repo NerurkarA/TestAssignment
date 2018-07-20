@@ -14,5 +14,5 @@ public class Constants {
 	public final static String OTHERCURRENCYSUNMESSAGE = "Oh, currency is OTHER it is sunday, can not settle on sunday, need to settle on Monday, adding 1 day";
 	public final static String CURRENCYSAR = "SAR";
 	public final static String CURRENCYAED = "AED";
-	public final static String NEXTSETTLEDATE = "Required trade will be processed on next settlement date";
+	public final static String NEXTSETTLEDATE = "To be processed on next settlement date";
 }
