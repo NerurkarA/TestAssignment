@@ -1,6 +1,6 @@
-com.example.hiring.test.comparator
-com.example.hiring.test.model
-com.example.hiring.test.process
-com.example.hiring.test.report
-com.example.hiring.test.tradeprocess
-com.example.hiring.test.util
+com.jpmc.hiring.test.comparator
+com.jpmc.hiring.test.model
+com.jpmc.hiring.test.process
+com.jpmc.hiring.test.report
+com.jpmc.hiring.test.tradeprocess
+com.jpmc.hiring.test.util
