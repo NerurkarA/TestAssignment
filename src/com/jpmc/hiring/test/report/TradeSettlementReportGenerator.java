@@ -12,13 +12,18 @@ import com.jpmc.hiring.test.model.StockTransaction;
 import com.jpmc.hiring.test.util.Constants;
 
 /**
- * @author Anand @ description
- * 
+ *<H1> TradeSettlementReportGenerator </H1>
+ * <P>
  * TradeSettlementReportGenerator Object provide the below functionality 1.
  * printReportsBySharesSold 2. printDailyReportsBySharesSold 3.
  * printReportsBySharesBought 4. printDailyReportsBySharesBought 5.
  * printReportBySortIncomingOutgoing 6. printReportsByNextSettlement
- *
+ 
+ * </P>
+ * @author Anand
+ * @version 1.0
+ * @since July 21 2018
+ * 
  */
 public class TradeSettlementReportGenerator {
 
@@ -30,11 +35,8 @@ public class TradeSettlementReportGenerator {
 	}
 
 	/*
-	 * Report for shares sold
-	 */
-	/*
+	 * This method report the shares sold 
 	 * @param List<StockTransaction>
-	 * 
 	 * @return int
 	 * 
 	 */
@@ -69,9 +71,7 @@ public class TradeSettlementReportGenerator {
 	}
 
 	/*
-	 * Report -Amount in USD settled incoming everyday
-	 */
-	/*
+	 * This method Report -Amount in USD settled incoming everyday
 	 * @param List<StockTransaction>
 	 * 
 	 * @param sdailyReportDate
@@ -118,13 +118,10 @@ public class TradeSettlementReportGenerator {
 				"End====printDailyReportsBySharesSold(List<StockTransaction> stockList, String sdailyReportDate)");
 		return count;
 	}
-	/*
-	 * Report for shares bought
-	 */
-
-	/*
+	
+	/*This method Report for shares bought
+	 *   
 	 * @param List<StockTransaction>
-	 * 
 	 * @return int
 	 * 
 	 */
@@ -160,9 +157,7 @@ public class TradeSettlementReportGenerator {
 
 	/*
 	 * @param List<StockTransaction>
-	 * 
 	 * @param sdailyReportDate
-	 * 
 	 * @return int
 	 * 
 	 */
@@ -206,13 +201,10 @@ public class TradeSettlementReportGenerator {
 		return count;
 	}
 
+	
 	/*
-	 * Report for Ranking of entities based on incoming and outgoing amount.
-	 */
-
-	/*
+	 * This method Report for Ranking of entities based on incoming and outgoing amount.
 	 * @param List<StockTransaction>
-	 * 
 	 * @return int
 	 *
 	 */
@@ -241,7 +233,6 @@ public class TradeSettlementReportGenerator {
 
 	/*
 	 * @param List<StockTransaction>
-	 * 
 	 * @return int
 	 *
 	 */

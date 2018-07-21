@@ -6,9 +6,16 @@ package com.jpmc.hiring.test.model;
 import java.util.Date;
 
 /**
+ * <h1>StockTransaction</h1>
+ * <p>
+ * StockTransaction: Hold actual transaction for trade settlement
+ *</p>
+ * 
  * @author Anand
+ * @version 1.0
+ * @since July 21 2018
  *
- *         StockTransaction: Hold actual transaction for trade settlement
+ *         
  */
 public class StockTransaction {
 	private String stockName;

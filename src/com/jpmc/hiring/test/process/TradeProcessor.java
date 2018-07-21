@@ -16,13 +16,18 @@ import com.jpmc.hiring.test.util.Constants;
 import com.jpmc.hiring.test.util.Utility;
 
 /**
+ * <h1>TradeProcessor</h1>
+ * <p>
+ *    TradeProcessor provide below functionality
+ * 		1. Processing the order - clientinstruction for the trade settlement
+ *     	2. Performing the trade settlement based on business rules/logic
+ * </P>
+ * 
  * @author Anand
+ * @version 1.0
+ * @since July 21 2018
  * 
- *         TradeProcessor Object provide below functionality
- * 
- *         1. Processing the order - clientinstruction for the trade settlement
- *         2. Performing the trade settlement based on business rules/logic
- * 
+ *      
  *
  */
 public class TradeProcessor {
@@ -36,10 +41,10 @@ public class TradeProcessor {
 		// TODO Auto-generated constructor stub
 	}
 
-	/*
-	 * @return List<ClientInstruction> ClientInstruction: Sample data represents the
+	/* This method prepare sample ClientInstruction: Sample data represents the
 	 * instructions sent by various clients to JP Morgan to execute in the
 	 * international market.
+	 * @return List<ClientInstruction> 
 	 */
 	public List<ClientInstruction> populateClientInstruction() {
 
@@ -219,20 +224,17 @@ public class TradeProcessor {
 
 		return clientInstructionList.size();
 	}
+	
 	/*
-	 * Processing order for trade settlement on working day with instruction receved
-	 * from the client
-	 */
-
-	/*
+	 * This method start placing order for trade settlement
 	 * @return List<StockTransaction>
 	 *
 	 */
 	public List<StockTransaction> placeOrder(List<ClientInstruction> clientInstructionList) throws ParseException {
 		// TODO Auto-generated method stub
-		// System.out.println();
+		
 		System.out.println("Start==== placeOrder(List<ClientInstruction> clientInstructionList)");
-		// System.out.println();
+		
 		TradeProcessor tradeProcessorDemo = new TradeProcessor();
 		List<StockTransaction> list = new ArrayList<StockTransaction>();
 
@@ -244,38 +246,28 @@ public class TradeProcessor {
 			SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy");
 
 			Date date = sdf.parse(settlementDateInString);
-			// System.out.println(date); //Tue Aug
-
-			// Date date = new Date();
-			// System.out.println("Settlement date is : " + Utility.dateFormater(date));
-			Calendar cal = Calendar.getInstance();
+		  	Calendar cal = Calendar.getInstance();
 			cal.setTime(date);
 			StockTransaction stockTransaction = tradeProcessorDemo.process(cal, instruction);
 			list.add(stockTransaction);
 		}
-		// System.out.println();
 		System.out.println("End==== placeOrder(List<ClientInstruction> clientInstructionList)");
 
 		return list;
 	}
 
 	/*
-	 * @return StockTransaction
-	 * 
-	 * @param Calendar cal
-	 * 
+	 *  This method process trade settlement on working day with instruction received from the client
+	 * @return StockTransaction 
+	 * @param Calendar cal 
 	 * @param ClientInstruction instruction
 	 *
 	 */
 	public StockTransaction process(Calendar cal, ClientInstruction instruction) throws ParseException {
 		// TODO Auto-generated method stub
-		// System.out.println();
-		// System.out.println("Start==== StockTransaction process(Calendar cal,
-		// ClientInstruction instruction)");
-		// System.out.println();
 		StockTransaction stockTransactionToSettle = new StockTransaction();
-		// sun mon tue wed thu fri sat
-		// 1 2 3 4 5 6 7
+		// sun mon 	tue	 wed	 thu	 fri	 sat
+		// 1 	2	 3	  4	 	 5	 	 6	 	 7
 		String currecny = instruction.getCurrencyType();
 		Date futureDate = null;
 		int day = 0;
@@ -329,11 +321,11 @@ public class TradeProcessor {
 				return stockTransactionToSettle;
 			}
 			// complete trade processing
-			// System.out.println("Satrt-------AED or SAR trade processing");
-			StockTransaction value = performTradeSettlement(cal, instruction);
-			// display(value);
-			// System.out.println();
-			// System.out.println("End-------AED or SAR trade processing");
+			System.out.println("Start-------trade settlement processing for the currency type "+stockTransactionToSettle.getCurrencyType());
+			
+			 StockTransaction value = performTradeSettlement(cal, instruction);
+			 System.out.println("End-------trade settlement processing for the currency type "+stockTransactionToSettle.getCurrencyType());
+				
 			return value;
 		} else {
 			// currecny is other than AED or SAR
@@ -381,20 +373,19 @@ public class TradeProcessor {
 				return stockTransactionToSettle;
 			}
 			// complete trade processing
-			// System.out.println("Satrt-------Other than AED or SAR trade processing");
+			 System.out.println("Start-------trade settlement processing for the currency type "+stockTransactionToSettle.getCurrencyType());
 			// value = performTradeSettlement(cal, instruction, value);
 			// display(value);
 			StockTransaction value = performTradeSettlement(cal, instruction);
-			// System.out.println("End-------Other than AED or SAR trade processing");
+			System.out.println("End-------trade settlement processing for the currency type "+stockTransactionToSettle.getCurrencyType());
+			
 			return value;
 		}
 
 	}
 
-	/*
-	 * Trade settlement process on working days based on currency type
-	 */
-	/*
+	/* This method perform Trade settlement on working days based on currency type
+	 
 	 * @return StockTransaction
 	 * 
 	 * @param Calendar cal

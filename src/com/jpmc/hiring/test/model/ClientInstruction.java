@@ -4,10 +4,15 @@
 package com.jpmc.hiring.test.model;
 
 /**
+ * <h1> ClientInstruction </h1>
+ * <p>  ClientInstruction represent input received from the client to execute the various trades
+ * 		on specified settlement date
+ * </p> 
+ * 
  * @author Anand
- *
- *         Client Instruction input received for trade settlement
- */
+ * @version 1.0
+ * @since July 21 2018
+ *     */
 public class ClientInstruction {
 	private String stockName;
 	private String instructionType;

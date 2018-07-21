@@ -12,13 +12,18 @@ import com.jpmc.hiring.test.process.TradeProcessor;
 import com.jpmc.hiring.test.report.TradeSettlementReportGenerator;
 
 /**
- * @author Anand
- * 
- *         TradeprocessApplication provide the below functionality
+ * <H1>TradeprocessApplication</H1>
+ *         
+ *         <P>TradeprocessApplication provide the below functionality
  * 
  *         1. Populating Client Instruction for processing trade 2. Placing the
  *         order with TradeProcessor 3. Get Reports with
- *         TradeSettlementReportGenerator
+ *         TradeSettlementReportGenerator</P>
+ * 
+ * @author Anand
+ * @version 1.0
+ * @since July 21 2018
+ * 
  *
  */
 

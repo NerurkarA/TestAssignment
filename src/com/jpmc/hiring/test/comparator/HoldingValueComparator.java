@@ -8,12 +8,16 @@ import java.util.Comparator;
 import com.jpmc.hiring.test.model.StockTransaction;
 
 /**
- * @author Anand
- * 
+ * <h1>HoldingValueComparator</h1>
+ * <p>
  * HoldingValueComparator  provide the below functionality
+ * 		1. Sorting based on HoldingValue for the stock/trade settlement 			
+ * </p>
  * 
- * 1.	Sorting based on HoldingValue for the stock/trade settlement 			
- *
+ *@author Anand
+ *@version 1.0
+ *@since July 21 2018 
+ * 
  */
 public class HoldingValueComparator implements Comparator<StockTransaction> {
 

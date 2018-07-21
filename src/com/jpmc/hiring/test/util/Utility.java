@@ -8,18 +8,22 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @author Anand 
+ * <h1>Utility</h1>
+ * <p>Utility class providing various utility functions</p>
  * 
- * Utility class providing various utility functions
+ * @author Anand
+ * @version 1.0
+ * @since July 21 2018
+ * 
  * 
  */
 public class Utility {
 
 	/*
-	 * Date formating function using SimpleDateFormate
+	 * 
 	 * 
 	 */
-	/*
+	/* This method perform Date formating function using SimpleDateFormate
 	 * @return String
 	 * @param Date date
 	 *
