@@ -451,6 +451,7 @@ public class TradeProcessor {
 			}
 
 		} else {
+			System.out.println("Trade settlement will be executed on "+sDate);
 			st.setHoldingValue(holdingValueForUnits);
 			st.setStatus(Constants.NEXTSETTLEDATE + " " + st.getSettlementDate());
 		}
