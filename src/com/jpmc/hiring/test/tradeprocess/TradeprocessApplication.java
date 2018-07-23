@@ -39,12 +39,12 @@ public class TradeprocessApplication {
 		
 		clientInstructionList = tradeProcessorDemo.populateClientInstruction();
 		System.out.println("Total no of shares to be processed =" + clientInstructionList.size());
-		System.out.println(" Start----- Placing order for trade settlement ");
+		//System.out.println(" Start----- Placing order for trade settlement ");
 
 		List<StockTransaction> stockList = tradeProcessorDemo.placeOrder(clientInstructionList);
 		// System.out.println();
 
-		System.out.println(" End-----Finished-Placing order for trade settlement ");
+		//System.out.println(" End-----Finished-Placing order for trade settlement ");
 
 		/*
 		 * Start=========Daily report logic
@@ -61,7 +61,12 @@ public class TradeprocessApplication {
 		/*
 		 * print reports for the trades that need to be settled
 		 */
-		tradeSettlementReport.printReportsByNextSettlement(stockList);
+		//tradeSettlementReport.printReportsByNextSettlement(stockList);
+
+		/*
+		 * print reports based on ranking -starting with highest holding value
+		 */
+		tradeSettlementReport.printReportBySortIncomingOutgoing(stockList);
 
 		/*
 		 * print reports by shares sold
@@ -78,11 +83,7 @@ public class TradeprocessApplication {
 		 */
 		tradeSettlementReport.printDailyReportsBySharesBought(stockList, sdailyReportDate);
 
-		/*
-		 * print reports based on ranking -starting with highest holding value
-		 */
-		tradeSettlementReport.printReportBySortIncomingOutgoing(stockList);
-
+		
 		/*
 		 * print reports by shares bought-outgoing everyday
 		 */

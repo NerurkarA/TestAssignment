@@ -51,7 +51,7 @@ public class TradeProcessor {
 		// Client instruction for trade settlement input
 		clientInstructionList = new ArrayList();
 		System.out.println(" Start----- Populating Client Instruction ");
-		ClientInstruction instruction = new ClientInstruction("FOO", "B", 0.50, "SGP", "18 Jul 2018", "19 Jul 2018", 20,
+		ClientInstruction instruction = new ClientInstruction("FOO", "B", 0.50, "SGP", "18 Jul 2018", "23 Jul 2018", 20,
 				100.25);
 		ClientInstruction instruction1 = new ClientInstruction("BAR", "S", 0.22, "AED", "01 Jul 2018", "18 Jul 2018",
 				40, 150.5);
@@ -66,8 +66,6 @@ public class TradeProcessor {
 
 		ClientInstruction instruction6 = new ClientInstruction("ACZ", "B", 0.20, "SGP", "18 Jul 2018", "21 Jul 2018",
 				20, 90.25);
-		ClientInstruction instruction7 = new ClientInstruction("BXP", "B", 0.14, "POUND", "12 Jul 2018", "22 Jul 2018",
-				29, 100.25);
 		ClientInstruction instruction8 = new ClientInstruction("PRZ", "B", 0.50, "AED", "18 Jul 2018", "20 Jul 2018",
 				46, 20.25);
 		ClientInstruction instruction9 = new ClientInstruction("AEMQ", "S", 0.65, "YEN", "19 Jul 2018", "20 Jul 2018",
@@ -84,26 +82,19 @@ public class TradeProcessor {
 				15, 100.25);
 		ClientInstruction instruction15 = new ClientInstruction("LXM", "B", 0.20, "SAR", "06 Jul 2018", "21 Jul 2018",
 				20, 143.25);
-		ClientInstruction instruction16 = new ClientInstruction("RTZ", "S", 0.50, "AED", "20 Jul 2018", "22 Jul 2018",
-				24, 65.25);
-		
-		ClientInstruction instruction17 = new ClientInstruction("STS", "S", 0.22, "SGP", "12 Jul 2018", "22 Jul 2018",
-				10, 450.25);
 		ClientInstruction instruction18 = new ClientInstruction("XSD", "B", 0.42, "PESO", "09 Jul 2018", "20 Jul 2018",
 				26, 20.25);
 		ClientInstruction instruction19 = new ClientInstruction("MTX", "S", 0.150, "DOLLAR", "12 Jul 2018",
-				"21 Jul 2018", 400, 61.25);
+				"23 Jul 2018", 400, 61.25);
 		ClientInstruction instruction20 = new ClientInstruction("GDO", "B", 0.75, "SGP", "9 Jul 2018", "22 Jul 2018",
 				43, 350.25);
-		ClientInstruction instruction21 = new ClientInstruction("GLF", "S", 0.65, "YEN", "2 Jul 2018", "18 Jul 2018",
+		ClientInstruction instruction21 = new ClientInstruction("GLF", "S", 0.65, "YEN", "2 Jul 2018", "24 Jul 2018",
 				15, 610.25);
 		ClientInstruction instruction22 = new ClientInstruction("PZW", "B", 0.35, "AED", "05 Jul 2018", "18 Jul 2018",
 				30, 45.25);
-		ClientInstruction instruction23 = new ClientInstruction("ZEN", "S", 0.50, "SGP", "19 Jul 2018", "21 Jul 2018",
+		ClientInstruction instruction23 = new ClientInstruction("ZEN", "S", 0.50, "SGP", "19 Jul 2018", "23 Jul 2018",
 				40, 14.65);
-		ClientInstruction instruction24 = new ClientInstruction("SQS", "S", 0.65, "YEN", "20 Jul 2018", "22 Jul 2018",
-				14, 10.25);
-
+		
 		
 		
 		  ClientInstruction instruction25 = new ClientInstruction("QS", "S", 0.65,
@@ -174,7 +165,7 @@ public class TradeProcessor {
 		clientInstructionList.add(instruction5);
 		//
 		clientInstructionList.add(instruction6);
-		clientInstructionList.add(instruction7);
+		//clientInstructionList.add(instruction7);
 		clientInstructionList.add(instruction8);
 		clientInstructionList.add(instruction9);
 		clientInstructionList.add(instruction10);
@@ -183,15 +174,15 @@ public class TradeProcessor {
 		clientInstructionList.add(instruction13);
 		clientInstructionList.add(instruction14);
 		clientInstructionList.add(instruction15);
-		clientInstructionList.add(instruction16);
-		clientInstructionList.add(instruction17);
+		//clientInstructionList.add(instruction16);
+		//clientInstructionList.add(instruction17);
 		clientInstructionList.add(instruction18);
 		clientInstructionList.add(instruction19);
 		clientInstructionList.add(instruction20);
 		clientInstructionList.add(instruction21);
 		clientInstructionList.add(instruction22);
 		clientInstructionList.add(instruction23);
-		clientInstructionList.add(instruction24);
+		//clientInstructionList.add(instruction24);
 		
 		 clientInstructionList.add(instruction25);
 		  clientInstructionList.add(instruction26);
@@ -240,7 +231,7 @@ public class TradeProcessor {
 	public List<StockTransaction> placeOrder(List<ClientInstruction> clientInstructionList) throws ParseException {
 		// TODO Auto-generated method stub
 		
-		System.out.println("Start==== placeOrder(List<ClientInstruction> clientInstructionList)");
+	//	System.out.println("Start==== placeOrder(List<ClientInstruction> clientInstructionList)");
 		
 		TradeProcessor tradeProcessorDemo = new TradeProcessor();
 		List<StockTransaction> list = new ArrayList<StockTransaction>();
@@ -258,7 +249,7 @@ public class TradeProcessor {
 			StockTransaction stockTransaction = tradeProcessorDemo.process(cal, instruction);
 			list.add(stockTransaction);
 		}
-		System.out.println("End==== placeOrder(List<ClientInstruction> clientInstructionList)");
+		//System.out.println("End==== placeOrder(List<ClientInstruction> clientInstructionList)");
 
 		return list;
 	}
@@ -402,7 +393,7 @@ public class TradeProcessor {
 	 */
 	private StockTransaction performTradeSettlement(Calendar cal, ClientInstruction instruction) throws ParseException {
 		// TODO Auto-generated method stub
-		System.out.println("Start=======StockTransaction performTradeSettlement()");
+		//System.out.println("Start=======StockTransaction performTradeSettlement()");
 		StockTransaction st = null;
 		double holdingValueForUnits = 0;
 		// get today date
@@ -432,12 +423,12 @@ public class TradeProcessor {
 			} else {
 				st.setStatus("Shares Sold");
 			}
-			System.out.println("Already Settled On Date " + sDate);
+			//System.out.println("Already Settled On Date " + sDate);
 		} else if (sDate.equals(todayDate)) {
-			System.out.println("Trade Settlement for Stock " + instruction.getStockName() + " Currency "
-					+ instruction.getCurrencyType() + " on working date "
-					+ Utility.findday(cal.get(Calendar.DAY_OF_WEEK)) + " " + instruction.getSettlementDate()
-					+ " is in progress");
+			//System.out.println("Trade Settlement for Stock " + instruction.getStockName() + " Currency "
+				//	+ instruction.getCurrencyType() + " on working date "
+					//+ Utility.findday(cal.get(Calendar.DAY_OF_WEEK)) + " " + instruction.getSettlementDate()
+					//+ " is in progress");
 
 			holdingValueForUnits = instruction.getAgreedFix() * instruction.getUnits() * instruction.getPricePerUnit();
 
@@ -449,13 +440,13 @@ public class TradeProcessor {
 			}
 
 		} else {
-			System.out.println("Trade settlement will be executed on "+sDate);
+			//System.out.println("Trade settlement will be executed on "+sDate);
 			st.setHoldingValue(holdingValueForUnits);
 			st.setStatus(Constants.NEXTSETTLEDATE + " " + st.getSettlementDate());
 		}
 		st.setHoldingValue(Utility.roundTwoDecimals(holdingValueForUnits));
 
-		System.out.println("End=======StockTransaction performTradeSettlement()");
+		//System.out.println("End=======StockTransaction performTradeSettlement()");
 		// System.out.println();
 		return st;
 
