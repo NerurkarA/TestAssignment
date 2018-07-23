@@ -36,6 +36,7 @@ public class TradeprocessApplication {
 		TradeSettlementReportGenerator tradeSettlementReport = new TradeSettlementReportGenerator();
 		// List: inMemory data to hold buy,sell and tosettle shares
 		List<ClientInstruction> clientInstructionList = null;
+		
 		clientInstructionList = tradeProcessorDemo.populateClientInstruction();
 		System.out.println("Total no of shares to be processed =" + clientInstructionList.size());
 		System.out.println(" Start----- Placing order for trade settlement ");
