@@ -53,71 +53,38 @@ class TradeApplicationTest {
 	void tearDown() throws Exception {
 	}
 
-	@Test
-	public void testPrintReportBySharesSold() {
-		
-		int count=report.printReportsBySharesSold(stockList);
-		System.out.println(count);
-		assertEquals(21, count);
-		
-	}
+	
 	
 
-	@Test
-	public void testPrintReportBySharesBought() {
-		
-		int count=report.printReportsBySharesBought(stockList);
-		System.out.println(count);
-		assertEquals(21, count);
-		
-	}
+	
 
 	@Test
 	public void testGetTotalNoOfSharesToBeProcessed() {
-		assertEquals(49, tprocessor.getTotalNoOfSharesToBeProcessed());	
+		assertEquals(33, tprocessor.getTotalNoOfSharesToBeProcessed());	
 	}
 	
-	@Test
-	public void testPrintReportsByNextSettlementDate() {
-		int count=report.printReportsByNextSettlement(stockList);
-		assertEquals(7, count);
-	}
-	@Test
-	public void testPrintDailyReportByIncomingByDate02July2018() {
-		String sdailyReportDate="02 Jul 2018";
-		int count=report.printDailyReportsBySharesBought(stockList, sdailyReportDate);
-		assertEquals(3, count);
-	}
 	
 	@Test
-	public void testPrintDailyReportByIncomingByDate05July2018() {
-		String sdailyReportDate="04 Jul 2018";
+	public void testPrintDailyReportByIncomingByDate23July2018() {
+		String sdailyReportDate="23 Jul 2018";
 		int count=report.printDailyReportsBySharesBought(stockList, sdailyReportDate);
-		assertEquals(1, count);
+		assertEquals(2, count);
+	}
+	
+	
+	
+
+	
+	
+	@Test
+	public void testPrintDailyReportByOutgoingByDate24July2018() {
+		String sdailyReportDate="24 Jul 2018";
+		int count=report.printDailyReportsBySharesSold(stockList, sdailyReportDate);
+		assertEquals(4, count);
 	}
 	
 
-	@Test
-	public void testPrintDailyReportByOutgoingByDate02July2018() {
-		String sdailyReportDate="02 Jul 2018";
-		int count=report.printDailyReportsBySharesSold(stockList, sdailyReportDate);
-		assertEquals(7, count);
-	}
 	
-	@Test
-	public void testPrintDailyReportByOutgoingByDate05July2018() {
-		String sdailyReportDate="05 Jul 2018";
-		int count=report.printDailyReportsBySharesSold(stockList, sdailyReportDate);
-		assertEquals(0, count);
-	}
-	
-
-	@Test
-	public void testPrintReportBySortingIncominoutgoing() {
-		//String sdailyReportDate="05 Jul 2018";
-		int count=report.printReportBySortIncomingOutgoing(stockList);
-		assertEquals(42, count);
-	}
 	
 	
 }
