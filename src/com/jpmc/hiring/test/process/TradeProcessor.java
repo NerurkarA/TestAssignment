@@ -51,163 +51,121 @@ public class TradeProcessor {
 		// Client instruction for trade settlement input
 		clientInstructionList = new ArrayList();
 		System.out.println(" Start----- Populating Client Instruction ");
-		ClientInstruction instruction = new ClientInstruction("FOO", "B", 0.50, "SGP", "18 Jul 2018", "23 Jul 2018", 20,
-				100.25);
-		ClientInstruction instruction1 = new ClientInstruction("BAR", "S", 0.22, "AED", "01 Jul 2018", "18 Jul 2018",
-				40, 150.5);
-		ClientInstruction instruction2 = new ClientInstruction("TCS", "B", 0.42, "INR", "12 Jul 2018", "18 Jul 2018",
-				60, 1500.5);
-		ClientInstruction instruction3 = new ClientInstruction("BRIT", "S", 0.24, "INR", "12 Jul 2018", "18 Jul 2018",
-				30, 350.5);
-		ClientInstruction instruction4 = new ClientInstruction("BNY", "B", 0.44, "AED", "19 Jul 2018", "21 Jul 2018",
-				30, 423.5);
-		ClientInstruction instruction5 = new ClientInstruction("INFY", "B", 0.25, "AED", "18 Jul 2018", "19 Jul 2018",
-				30, 423.5);
-
-		ClientInstruction instruction6 = new ClientInstruction("ACZ", "B", 0.20, "SGP", "18 Jul 2018", "21 Jul 2018",
-				20, 90.25);
-		ClientInstruction instruction8 = new ClientInstruction("PRZ", "B", 0.50, "AED", "18 Jul 2018", "20 Jul 2018",
+				ClientInstruction instruction1 = new ClientInstruction("PRZ", "B", 0.50, "AED", "18 Jul 2018", "24 Jul 2018",
 				46, 20.25);
-		ClientInstruction instruction9 = new ClientInstruction("AEMQ", "S", 0.65, "YEN", "19 Jul 2018", "20 Jul 2018",
+		ClientInstruction instruction2 = new ClientInstruction("AEMQ", "S", 0.65, "YEN", "19 Jul 2018", "24 Jul 2018",
 				68, 50.25);
-		ClientInstruction instruction10 = new ClientInstruction("IBM", "S", 0.85, "DOLLAR", "19 Jul 2018",
-				"21 Jul 2018", 12, 430.25);
-		ClientInstruction instruction11 = new ClientInstruction("MARI", "S", 0.35, "YEN", "19 Jul 2018", "20 Jul 2018",
+		ClientInstruction instruction3 = new ClientInstruction("MARI", "S", 0.35, "YEN", "19 Jul 2018", "24 Jul 2018",
 				30, 145);
-		ClientInstruction instruction12 = new ClientInstruction("SUZ", "B", 0.32, "PESO", "05 Jul 2018", "19 Jul 2018",
+		ClientInstruction instruction4 = new ClientInstruction("SUZ", "B", 0.32, "PESO", "05 Jul 2018", "25 Jul 2018",
 				33, 54.25);
-		ClientInstruction instruction13 = new ClientInstruction("FORD", "S", 0.23, "SGP", "18 Jul 2018", "19 Jul 2018",
+		ClientInstruction instruction5 = new ClientInstruction("FORD", "S", 0.23, "SGP", "18 Jul 2018", "25 Jul 2018",
 				10, 200.25);
-		ClientInstruction instruction14 = new ClientInstruction("MXQ", "B", 0.50, "YEN", "2 Jul 2018", "21 Jul 2018",
-				15, 100.25);
-		ClientInstruction instruction15 = new ClientInstruction("LXM", "B", 0.20, "SAR", "06 Jul 2018", "21 Jul 2018",
-				20, 143.25);
-		ClientInstruction instruction18 = new ClientInstruction("XSD", "B", 0.42, "PESO", "09 Jul 2018", "20 Jul 2018",
-				26, 20.25);
-		ClientInstruction instruction19 = new ClientInstruction("MTX", "S", 0.150, "DOLLAR", "12 Jul 2018",
+		ClientInstruction instruction6 = new ClientInstruction("MTX", "S", 0.150, "DOLLAR", "12 Jul 2018",
 				"23 Jul 2018", 400, 61.25);
-		ClientInstruction instruction20 = new ClientInstruction("GDO", "B", 0.75, "SGP", "9 Jul 2018", "22 Jul 2018",
+		ClientInstruction instruction7 = new ClientInstruction("GDO", "B", 0.75, "SGP", "9 Jul 2018", "23 Jul 2018",
 				43, 350.25);
-		ClientInstruction instruction21 = new ClientInstruction("GLF", "S", 0.65, "YEN", "2 Jul 2018", "24 Jul 2018",
+		ClientInstruction instruction8 = new ClientInstruction("GLF", "S", 0.65, "YEN", "2 Jul 2018", "24 Jul 2018",
 				15, 610.25);
-		ClientInstruction instruction22 = new ClientInstruction("PZW", "B", 0.35, "AED", "05 Jul 2018", "18 Jul 2018",
-				30, 45.25);
-		ClientInstruction instruction23 = new ClientInstruction("ZEN", "S", 0.50, "SGP", "19 Jul 2018", "23 Jul 2018",
+		ClientInstruction instruction9 = new ClientInstruction("ZEN", "S", 0.50, "SGP", "19 Jul 2018", "23 Jul 2018",
 				40, 14.65);
 		
 		
 		
-		  ClientInstruction instruction25 = new ClientInstruction("QS", "S", 0.65,
+		  ClientInstruction instruction10 = new ClientInstruction("QS", "S", 0.65,
 		  "YEN", "20 Jul 2018", "23 Jul 2018", 14, 120.25);
 		  
-		  ClientInstruction instruction26 = new ClientInstruction("SQ", "S", 0.65,
+		  ClientInstruction instruction11 = new ClientInstruction("SQ", "S", 0.65,
 		 "AED", "20 Jul 2018", "24 Jul 2018", 6, 100.25);
 		 
-		  ClientInstruction instruction27 = new ClientInstruction("SMJ", "B", 0.65,
+		  ClientInstruction instruction12 = new ClientInstruction("SMJ", "B", 0.65,
 		  "YEN", "20 Jun 2018", "23 Jul 2018", 10, 120.25);
 		  
-		  ClientInstruction instruction28 = new ClientInstruction("ABC", "B", 0.20,
-		  "SAR", "20 Jun 2018", "23 Jul 2018", 6, 1432.25);
-		  ClientInstruction  instruction29 = new ClientInstruction("RTAZ", "B", 0.50, "AED",
+		  ClientInstruction instruction13 = new ClientInstruction("ABC", "S", 0.20,
+		  "SAR", "20 Jun 2018", "26 Jul 2018", 6, 1432.25);
+		  ClientInstruction  instruction14 = new ClientInstruction("RTAZ", "B", 0.50, "AED",
 		  "27 Jun 2018", "24 Jul 2018", 23, 65.25);
-		  ClientInstruction instruction30 =
+		  ClientInstruction instruction15 =
 		  new ClientInstruction("ASTS", "S", 0.22, "SGP", "27 Jun 2018", "25 Jul 2018",
 		  7, 430.25);
-		  ClientInstruction instruction31 = new ClientInstruction("XSD",
+		  ClientInstruction instruction16 = new ClientInstruction("XSD",
 		  "B", 0.42, "PESO", "2 Jul 2018", "26 Jul 2018", 23, 20.25);
-		  ClientInstruction instruction32 = new ClientInstruction("AMTX", "S", 0.150, "DOLLAR",
+		  ClientInstruction instruction17 = new ClientInstruction("AMTX", "S", 0.150, "DOLLAR",
 		  "20 Jun 2018", "26 Jul 2018", 43, 61.25); 
-		  ClientInstruction instruction33 = new ClientInstruction("GADO", "B", 0.75, "AED", "26 Jun 2018", "27 Jul 2018",
+		  ClientInstruction instruction18 = new ClientInstruction("GADO", "B", 0.75, "AED", "26 Jun 2018", "27 Jul 2018",
 		 43, 35.25); 
-		  ClientInstruction instruction34 = new ClientInstruction("GLAF",
+		  ClientInstruction instruction19 = new ClientInstruction("GLAF",
 		  "S", 0.65, "YEN", "12 Jul 2018", "27 Jul 2018", 15, 61.25);
-		  ClientInstruction instruction35 = new ClientInstruction("PZW", "B", 0.35, "AED", "28 Jun 2018",
+		  ClientInstruction instruction20 = new ClientInstruction("PZW", "B", 0.35, "AED", "28 Jun 2018",
 		  "28 Jul 2018", 30, 450.25);
-		  ClientInstruction instruction36 = new ClientInstruction("ZAEN", "S", 0.50, "SGP", "02 Jul 2018", "28 Jul 2018", 45,
+		  ClientInstruction instruction21 = new ClientInstruction("ZAEN", "S", 0.50, "SGP", "02 Jul 2018", "28 Jul 2018", 45,
 		 124.65);
-		  ClientInstruction instruction37 = new ClientInstruction("SQSA", "S",
+		  ClientInstruction instruction22 = new ClientInstruction("SQSA", "S",
 		 0.65, "YEN", "20 Jun 2018", "28 Jul 2018", 14, 10.25);
 		  
-		  ClientInstruction instruction38 = new ClientInstruction("QSB", "S", 0.65,
+		  ClientInstruction instruction23 = new ClientInstruction("QSB", "S", 0.65,
 		  "YEN", "20 Jun 2018", "29 Jul 2018", 14, 90.25);
 		  
-		  ClientInstruction instruction39 = new ClientInstruction("SQM", "B", 0.65,
+		  ClientInstruction instruction24 = new ClientInstruction("SQM", "B", 0.65,
 		  "SAR", "20 Jun 2018", "29 Jul 2018", 12, 80.25);
 		  
-		  ClientInstruction instruction40 = new ClientInstruction("ZSMJ", "S", 0.65,
+		  ClientInstruction instruction25 = new ClientInstruction("ZSMJ", "S", 0.65,
 		  "AED", "20 Jun 2018", "29 Jul 2018", 14, 20.25);
 		  
-		  ClientInstruction instruction41 = new ClientInstruction("MAJ", "S", 0.65,
-		  "YEN", "04 Jul 2018", "18 Jul 2018", 14, 300.25);
+		  ClientInstruction instruction26 = new ClientInstruction("MAJ", "S", 0.65,
+		  "YEN", "04 Jul 2018", "23 Jul 2018", 14, 300.25);
 		  
-		  ClientInstruction instruction42 = new ClientInstruction("FOX", "B", 0.50,
-		  "SGP", "29 Jun 2018", "27 Jul 2018", 34, 300.25);
-		  ClientInstruction instruction43= new ClientInstruction("BAT", "S", 0.22, "AED", "02 Jul 2018",
-		  "28 Jul 2018", 40, 120.5);
-		  ClientInstruction instruction44= new ClientInstruction("TCA", "B", 0.42, "INR", "27 Jun 2018", "27 Jul 2018", 60,
+		  ClientInstruction instruction27 = new ClientInstruction("FOX", "B", 0.50,
+		  "SGP", "29 Jun 2018", "26 Jul 2018", 34, 300.25);
+		  ClientInstruction instruction28= new ClientInstruction("BAT", "S", 0.22, "AED", "02 Jul 2018",
+		  "26 Jul 2018", 40, 120.5);
+		  ClientInstruction instruction29= new ClientInstruction("TCA", "B", 0.42, "INR", "27 Jun 2018", "27 Jul 2018", 60,
 		 1230.5);
-		  ClientInstruction instruction45= new ClientInstruction("BRT", "B",
-		  0.24, "INR", "27 Jun 2018", "28 Jun 2018", 30, 35.5);
-		  ClientInstruction instruction46 = new ClientInstruction("BKY", "S", 0.44, "AED", "24 Jun 2018",
-		  "28 Jul 2018", 30, 43.5);
-		  ClientInstruction instruction47 = new ClientInstruction("INTY", "B", 0.25, "AED", "03 Jul 2018", "27 Jul 2018", 32,
+		  ClientInstruction instruction30= new ClientInstruction("BRT", "B",
+		  0.24, "INR", "27 Jun 2018", "28 Jul 2018", 30, 35.5);
+		  ClientInstruction instruction31 = new ClientInstruction("BKY", "S", 0.44, "AED", "24 Jun 2018",
+		  "25 Jul 2018", 30, 43.5);
+		  ClientInstruction instruction32 = new ClientInstruction("INTY", "B", 0.25, "AED", "03 Jul 2018", "27 Jul 2018", 32,
 		  42.5);
 		  
-		  ClientInstruction instruction48= new ClientInstruction("ACW", "B", 0.20,
+		  ClientInstruction instruction33= new ClientInstruction("ACW", "B", 0.20,
 		  "SGP", "03 Jul 2018", "26 Jul 2018", 20, 94.25);
 		 
 
-		clientInstructionList.add(instruction);
 		clientInstructionList.add(instruction1);
 		clientInstructionList.add(instruction2);
 		clientInstructionList.add(instruction3);
 		clientInstructionList.add(instruction4);
 		clientInstructionList.add(instruction5);
-		//
 		clientInstructionList.add(instruction6);
-		//clientInstructionList.add(instruction7);
+		clientInstructionList.add(instruction7);
 		clientInstructionList.add(instruction8);
 		clientInstructionList.add(instruction9);
-		clientInstructionList.add(instruction10);
-		clientInstructionList.add(instruction11);
-		clientInstructionList.add(instruction12);
-		clientInstructionList.add(instruction13);
-		clientInstructionList.add(instruction14);
-		clientInstructionList.add(instruction15);
-		//clientInstructionList.add(instruction16);
-		//clientInstructionList.add(instruction17);
-		clientInstructionList.add(instruction18);
-		clientInstructionList.add(instruction19);
-		clientInstructionList.add(instruction20);
-		clientInstructionList.add(instruction21);
-		clientInstructionList.add(instruction22);
-		clientInstructionList.add(instruction23);
-		//clientInstructionList.add(instruction24);
 		
-		 clientInstructionList.add(instruction25);
+		 clientInstructionList.add(instruction10);
+		  clientInstructionList.add(instruction11);
+		  clientInstructionList.add(instruction12);
+		  clientInstructionList.add(instruction13);
+		  clientInstructionList.add(instruction14);
+		  clientInstructionList.add(instruction15);
+		  clientInstructionList.add(instruction16);
+		  clientInstructionList.add(instruction17);
+		  clientInstructionList.add(instruction18);
+		  clientInstructionList.add(instruction19);
+		  clientInstructionList.add(instruction20);
+		  clientInstructionList.add(instruction21);
+		 clientInstructionList.add(instruction22);
+		  clientInstructionList.add(instruction23);
+		  clientInstructionList.add(instruction24);
+		  clientInstructionList.add(instruction25);
 		  clientInstructionList.add(instruction26);
 		  clientInstructionList.add(instruction27);
 		  clientInstructionList.add(instruction28);
 		  clientInstructionList.add(instruction29);
-		  clientInstructionList.add(instruction30);
+		 clientInstructionList.add(instruction30);
 		  clientInstructionList.add(instruction31);
 		  clientInstructionList.add(instruction32);
 		  clientInstructionList.add(instruction33);
-		  clientInstructionList.add(instruction34);
-		  clientInstructionList.add(instruction35);
-		  clientInstructionList.add(instruction36);
-		 clientInstructionList.add(instruction37);
-		  clientInstructionList.add(instruction38);
-		  clientInstructionList.add(instruction39);
-		  clientInstructionList.add(instruction40);
-		  clientInstructionList.add(instruction41);
-		  clientInstructionList.add(instruction42);
-		  clientInstructionList.add(instruction43);
-		  clientInstructionList.add(instruction44);
-		 clientInstructionList.add(instruction45);
-		  clientInstructionList.add(instruction46);
-		  clientInstructionList.add(instruction47);
-		  clientInstructionList.add(instruction48);
 		  
 		  System.out.println(" End-----Finished-Populating Client Instruction ");
 		return clientInstructionList;
@@ -321,8 +279,8 @@ public class TradeProcessor {
 			// complete trade processing
 			//System.out.println("Start-------trade settlement processing for the currency type "+instruction.getCurrencyType());
 			
-			 StockTransaction value = performTradeSettlement(cal, instruction);
-			 //System.out.println("End-------trade settlement processing for the currency type "+instruction.getCurrencyType());
+			StockTransaction value = performTradeSettlement(cal, instruction);
+			//System.out.println("End-------trade settlement processing for the currency type "+instruction.getCurrencyType());
 				
 			return value;
 		} else {
@@ -379,6 +337,7 @@ public class TradeProcessor {
 			
 			return value;
 		}
+		//return stockTransactionToSettle;
 
 	}
 

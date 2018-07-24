@@ -61,7 +61,7 @@ public class TradeprocessApplication {
 		/*
 		 * print reports for the trades that need to be settled
 		 */
-		//tradeSettlementReport.printReportsByNextSettlement(stockList);
+		tradeSettlementReport.printReportsByNextSettlement(stockList);
 
 		/*
 		 * print reports based on ranking -starting with highest holding value
